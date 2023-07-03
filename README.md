@@ -1,2 +1,2 @@
 # Daily Checker
-<input type=checkbox> [Day 1]()
+<input type=checkbox checked> [Day 1]()

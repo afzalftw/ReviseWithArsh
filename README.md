@@ -1,2 +1,2 @@
 # Daily Checker
-<input type=checkbox checked> [Day 1]()
+- Day 1 ![](https://geps.dev/progress/100)

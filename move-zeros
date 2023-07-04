@@ -1,0 +1,13 @@
+class Solution {
+    public void moveZeroes(int[] nums) {
+        int c=0,i=0;
+        for(int x:nums){
+            if(x==0) c++;
+            else if(c>0){
+                nums[i-c]=nums[i];
+                nums[i]=0;
+            }
+            i++;
+        }
+    }
+}

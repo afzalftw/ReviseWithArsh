@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/set-matrix-zeroes/submissions/985398379/
+// https://leetcode.com/problems/set-matrix-zeroes/
 class Solution {
     static void set(int[][] a,int x,int y){
         for(int i=0;i<a[0].length;i++) a[x][i]=0;  

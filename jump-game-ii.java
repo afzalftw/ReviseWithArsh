@@ -1,4 +1,5 @@
-class Solution {
+
+https://leetcode.com/problems/jump-game-ii/class Solution {
     public int jump(int[] nums) {
         //bottom up dp
         int[] dp=new int[nums.length];

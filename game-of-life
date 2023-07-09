@@ -1,0 +1,47 @@
+//https://leetcode.com/problems/game-of-life/
+class Solution {
+    public void gameOfLife(int[][] a) {
+        int m=a.length,n=a[0].length,sum=0;
+        ArrayList<int[]> dead=new ArrayList<>();
+        ArrayList<int[]> alive=new ArrayList<>();
+        for(int i=0;i<m;i++){
+            for(int j=0;j<n;j++){
+                sum=0;
+                if(i>=0&&i+1<=m){
+                    if(i!=0){
+                        if(j!=0) sum+=a[i-1][j-1];
+                        sum+=a[i-1][j];
+                    }  
+                    if(i!=m-1){
+                        if(j!=n-1) sum+=a[i+1][j+1];
+                        sum+=a[i+1][j];
+                    } 
+                } 
+                if(j>=0&&j+1<=n){
+                    if(j!=0){
+                        if(i!=m-1) sum+=a[i+1][j-1];
+                        sum+=a[i][j-1];
+                    } 
+                    if(j!=n-1){
+                        if(i!=0) sum+=a[i-1][j+1];
+                        sum+=a[i][j+1];
+                    } 
+                } 
+                if(sum==2||sum==3){
+                    if(a[i][j]==0){
+                        if(sum==3) alive.add(new int[]{i,j});
+                    }
+                    else a[i][j]=1;
+                }
+                else dead.add(new int[]{i,j});
+
+            }
+        }
+        for(int[] x:dead){
+            a[x[0]][x[1]]=0;
+        }
+        for(int[] x:alive){
+            a[x[0]][x[1]]=1;
+        }
+    }
+}
